@@ -9,7 +9,7 @@ describe "Enumerbable extensions" do
   end
 
   it "should allow array.select.method invocations" do
-    [42, 3.14, 1729, 2.71].select.postive?.should == [42, 1729]
+    [42, 3.14, 1729, 2.71].select.integer?.should == [42, 1729]
     ([1, -7, 2, -9].select > 0).should == [1, 2]
     [42, :symbol, 'String', {}].select.respond_to?(:succ).should == [42, 'String']
 
